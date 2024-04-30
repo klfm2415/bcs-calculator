@@ -1,4 +1,5 @@
 let result = 0;
+let operator = "";
 
 const resultEl = document.querySelector(".result");
 
@@ -12,6 +13,12 @@ function onClickNumber(number) {
   } else {
     resultEl.innerHTML += number;
   }
+}
 
-  console.log(resultEl.innerHTML.length);
+function onClickOperator(inputOperator) {
+  result = +resultEl.innerHTML;
+
+  resultEl.innerHTML = 0;
+
+  operator = inputOperator;
 }
